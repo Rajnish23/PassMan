@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ActivityChangePassword"></activity>
-        <activity android:name=".activities.ActivityLogin">
+        <activity android:name=".activities.ActivityHome"></activity>
+        <activity
+            android:name=".activities.ActivityChangePassword"
+            android:theme="@style/AppThemeChangePassword"/>
+        <activity
+            android:name=".activities.ActivityLogin"
+            android:theme="@style/AppThemeLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

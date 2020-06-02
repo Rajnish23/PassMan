@@ -57,7 +57,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/tv_register"
+        android:id="@+id/tv_changePass"
         android:layout_below="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

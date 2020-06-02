@@ -23,7 +23,7 @@
 
 
 <!-- Change Password Activity Theme. -->
-<style name="AppThemeRegister" parent="Theme.AppCompat.Light.DarkActionBar">
+<style name="AppThemeChangePassword" parent="Theme.AppCompat.Light.DarkActionBar">
     <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/colorPrimary2</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark2</item>

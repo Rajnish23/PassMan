@@ -5,6 +5,9 @@
     <string name="hint_confirm_password">Confirm New Password</string>
     <string name="txt_lgn">LOGIN</string>
     <string name="txt_changePass">Change Password ? </string>
+    <string name="empty_field">Empty Field !</string>
+    <string name="incorrect_value">Incorrect Value !</string>
+    <string name="success">"Successfully Done"</string>
 </resources>
 
 

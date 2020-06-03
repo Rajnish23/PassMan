@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.example.conceptsofkotlin.R
+import com.example.conceptsofkotlin.utils.ReusableTasks
+import com.example.conceptsofkotlin.utils.SessionManager
 
 class ActivityLogin : AppCompatActivity() {
 
@@ -24,24 +26,37 @@ class ActivityLogin : AppCompatActivity() {
 
         //actions on clicking
         tv_changePassword.setOnClickListener { changePass() }
-        btn_login.setOnClickListener { canProceed(ed_password.text.toString().trim(),isNullLambda) }
+        btn_login.setOnClickListener { onLogin() }
 
     }
 
-    //Lambda function to check if string is null
-    var isNullLambda: (String) -> Boolean = {str -> str.isEmpty()}
+    private fun dataValidation(): Boolean{
+        val performTask = ReusableTasks(this)
+        val session = SessionManager(this)
+        val enteredPass = ed_password.text.toString().trim()
 
-    //Higher order function for further action after string check
-    fun canProceed(string: String, lamFunct: (String) -> Boolean){
-        when (lamFunct(string)){
-            true -> ed_password.setError("Empty Field !")
-            else -> onLogin(string)
+        when (performTask.canProceed(enteredPass,performTask.isNullLambda)){
+            true -> {
+                when (session.proceedAfterCheck(enteredPass,session.checkPasses)){
+                    true -> { return true }
+                    else -> ed_password.error = getText(R.string.incorrect_value)
+                }
+            }
+            else -> ed_password.error = getText(R.string.empty_field)
         }
+
+        return false
     }
 
-    //when
-    private fun onLogin(pass: String) {
-        Toast.makeText(this,pass,Toast.LENGTH_LONG).show()
+    //when login button is clicked
+    private fun onLogin() {
+
+        if(dataValidation()){
+            Toast.makeText(this,getText(R.string.success),Toast.LENGTH_LONG).show()
+            val intent = Intent(this,ActivityHome::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     //Directing to activity for changing password

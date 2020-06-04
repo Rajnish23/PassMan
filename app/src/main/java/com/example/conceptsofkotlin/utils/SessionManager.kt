@@ -21,7 +21,7 @@ class SessionManager(context : Context) {
     var checkPasses: (String) -> Boolean = {enteredPass -> enteredPass == sharedPref.getString(PASSWORD,"admin@123") }
 
     //higher order function to proceed after password check
-    fun proceedAfterCheck(enteredPass: String, comparision: (String) -> Boolean): Boolean {
+    fun proceedAfterCheck(enteredPass: String, comparision: (String) -> Boolean = checkPasses): Boolean {
         return comparision(enteredPass)
         }
 }

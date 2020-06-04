@@ -8,7 +8,7 @@ class ReusableTasks(context: Context) {
     var isNullLambda: (String) -> Boolean = {str -> str.isEmpty()}
 
     //Higher order function for further action after string check
-    fun canProceed(string: String, lamFunct: (String) -> Boolean): Boolean{
+    fun canProceed(string: String, lamFunct: (String) -> Boolean = isNullLambda): Boolean{
         return !lamFunct(string)
         }
 }

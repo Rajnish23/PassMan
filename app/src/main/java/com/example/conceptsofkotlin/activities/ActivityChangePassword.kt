@@ -3,12 +3,16 @@ package com.example.conceptsofkotlin.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.example.conceptsofkotlin.R
 import com.example.conceptsofkotlin.utils.ReusableTasks
 import com.example.conceptsofkotlin.utils.SessionManager
+import com.example.conceptsofkotlin.utils.showToast
+import kotlinx.android.synthetic.main.activity_change_password.*
 
 class ActivityChangePassword : AppCompatActivity() {
 
@@ -33,11 +37,11 @@ class ActivityChangePassword : AppCompatActivity() {
         val currPass: String=ed_currentPass.text.toString().trim()
         val newPass: String = ed_newPass.text.toString().trim()
 
-        when (performTask.canProceed(currPass,performTask.isNullLambda)){
+        when (performTask.canProceed(currPass)){
             true -> {
-                when (performTask.canProceed(newPass, performTask.isNullLambda)) {
+                when (performTask.canProceed(newPass)) {
                     true -> {
-                        when (session.proceedAfterCheck(currPass, session.checkPasses)) {
+                        when (session.proceedAfterCheck(currPass)) {
                             true -> {
                                 session.saveCurrentPass(newPass)
                                 return true
@@ -58,12 +62,20 @@ class ActivityChangePassword : AppCompatActivity() {
 
     private fun onChangePassword(){
 
-        if (dataValidation()){
+        val pb_loading: ProgressBar = findViewById(R.id.pbLoading)
 
-            Toast.makeText(this,getText(R.string.success),Toast.LENGTH_LONG).show()
+        pb_loading.visibility = View.VISIBLE
+        btnChangePass.visibility = View.GONE
+
+        if (dataValidation()){
+            showToast(getText(R.string.success).toString())
             val intent = Intent(this,ActivityLogin::class.java)
             startActivity(intent)
             finish()
+        }
+        else{
+            pb_loading.visibility = View.GONE
+            btnChangePass.visibility = View.VISIBLE
         }
 
     }

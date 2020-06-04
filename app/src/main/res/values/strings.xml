@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ConceptsOfKotlin</string>
+    <string name="app_name">PassMan</string>
     <string name="hint_curr_pass">Current Password</string>
     <string name="hint_password">New Password</string>
     <string name="hint_confirm_password">Confirm New Password</string>

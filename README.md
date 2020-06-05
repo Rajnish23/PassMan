@@ -22,7 +22,7 @@ The project still meets all the guidelines mentioned for the participation certi
 
 ### How are the above concepts used ? :
 
-- Subclasses/Inheritance : Every activity in the Application (PassMan) extends 'AppCompactActivity'. All the functions of the superclass has been over-ridden and used in activities of the application.
+- **Subclasses/Inheritance** : Every activity in the Application (PassMan) extends 'AppCompactActivity'. All the functions of the superclass has been over-ridden and used in activities of the application.
 ```kotlin
 class ActivityHome : AppCompatActivity() {
 
@@ -40,7 +40,7 @@ class ActivityHome : AppCompatActivity() {
 
 
 
-- Objects and Companion Objects : Object _Constants_ has been used to contain constants in a seperate Kotlin file and use it anywhere by just accessing the constant using **<object_name>.<variable_name>**
+- **Objects and Companion Objects** : Object _Constants_ has been used to contain constants in a seperate Kotlin file and use it anywhere by just accessing the constant using **<object_name>.<variable_name>**
 ```kotlin
 object Constants {
     val clickButton = "Button Is Clicked"
@@ -61,7 +61,7 @@ private fun onLogin() {
 
 
 
-- Extensions : An extension function called _showToast()_ is created which is of the superclass _Context_ without editing the actual class. It can directly be accessed as Context class is automatically inherited by all the activities.
+- **Extensions** : An extension function called _showToast()_ is created which is of the superclass _Context_ without editing the actual class. It can directly be accessed as Context class is automatically inherited by all the activities.
 ```kotlin
 fun Context.showToast(message: String,duration: Int = Toast.LENGTH_LONG){
     Toast.makeText(this,message,duration).show()
@@ -75,7 +75,7 @@ showToast(getText(R.string.success).toString())
 
 
 
-- Lambdas & Higher Order Functions : Many lambdas and higher order functions are used in seperate files for it to be reusable everywhere. One of it is _isNullLambda_ as lambda function and _canProceed()_ as the higher order function. 
+- **Lambdas & Higher Order Functions** : Many lambdas and higher order functions are used in seperate files for it to be reusable everywhere. One of it is _isNullLambda_ as lambda function and _canProceed()_ as the higher order function. 
 ```kotlin
 class ReusableTasks(context: Context) {
 
@@ -106,7 +106,7 @@ when (performTask.canProceed(enteredPass)){
 
 
 
-- Reflection : The application uses reflection while passing explicit intents fron onr activity to another. 
+- **Reflection** : The application uses reflection while passing explicit intents fron onr activity to another. 
 ```kotlin
 val intent = Intent(this,ActivityHome::class.java)
             startActivity(intent)
@@ -115,7 +115,7 @@ val intent = Intent(this,ActivityHome::class.java)
 
 
 
-- Default Parameter Passing : The application has functions which use the feature of default values for parameters. 
+- **Default Parameter Passing** : The application has functions which use the feature of default values for parameters. 
 ```kotlin
 fun canProceed(string: String, lamFunct: (String) -> Boolean = isNullLambda): Boolean{
         return !lamFunct(string)
@@ -132,7 +132,7 @@ fun Context.showToast(message: String,duration: Int = Toast.LENGTH_LONG){
 
 
 
-- Extending Abstract Class : In the _AccountDetailsAdapter_ file for the recyclerview, the _AdapterDetailsVH_ class extends the _RecyclerView.ViewHolder_ abstract class. Hence the three functions viz _getItemCount()_, _onBindViewHolder()_ & _onCreateViewHolder()_ are to be implemented to the class compulsorily.
+- **Extending Abstract Class** : In the _AccountDetailsAdapter_ file for the recyclerview, the _AdapterDetailsVH_ class extends the _RecyclerView.ViewHolder_ abstract class. Hence the three functions viz _getItemCount()_, _onBindViewHolder()_ & _onCreateViewHolder()_ are to be implemented to the class compulsorily.
 ```kotlin
 override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AccountDetailsVH {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.recycler_elements,parent,false)

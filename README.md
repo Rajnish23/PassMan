@@ -7,7 +7,13 @@ As of now,the values of acoounts and its details are hardcoded as its just a _de
 
 The idea behind making this application is that we can just remember one password and can add,update all other passwords for different accounts at one place(and this will be achieved after the applicated is fully integrated with a backend). 
 
-The project still meets all the guidelines mentioned for the participation certificate.
+##### Features to be included :
+- Adding new account details which will be done using a dialog box popping up on Floating Action Button click
+- Updating existing details of an account
+- Deleting an existing account
+- Copying data on long click on the account info
+
+The project still suffices to meet all the guidelines mentioned for the participation certificate.
 
 ### Concepts and terminologies sucessfully used :
 
@@ -18,6 +24,7 @@ The project still meets all the guidelines mentioned for the participation certi
 - Reflection
 - Default Parameter Passing
 - Extending Abstract Class
+- Data Class
 
 
 ### How are the above concepts used ? :
@@ -153,3 +160,10 @@ override fun onBindViewHolder(holder: AccountDetailsVH, position: Int) {
 }
 ```
 
+
+
+- **Data Class** : The class _AccountDetails_ which is the model class to the adapter of recyclerview is a data class containing all the variables declared in each of the accounts to be displayed in the application.
+```kotlin
+class AccountDetails(val accountName: String, val email: String, val password: String,var expandable: Boolean = false){
+}
+```

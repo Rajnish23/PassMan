@@ -1,4 +1,4 @@
-# ConceptsOfKotlin
+# PassMan
 This project has several concepts of Kotlin implemented into a simple demo aaplication performing various tasks.
 
 The Android Application is a simple Password Manager (hence the name ***PassMan***) that has three activities. One for logging in, another to change password and last one to list all the accounts with its details.

@@ -1,2 +1,2 @@
-rootProject.name='ConceptsOfKotlin'
+rootProject.name='PassMan'
 include ':app'

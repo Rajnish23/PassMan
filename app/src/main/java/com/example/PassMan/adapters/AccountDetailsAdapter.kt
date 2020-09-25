@@ -1,4 +1,4 @@
-package com.example.conceptsofkotlin.adapters
+package com.example.PassMan.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.conceptsofkotlin.R
-import com.example.conceptsofkotlin.models.AccountDetails
+import com.example.PassMan.R
+import com.example.PassMan.models.AccountDetails
 
 class AccountDetailsAdapter(val detailList: List<AccountDetails>): RecyclerView.Adapter<AccountDetailsAdapter.AccountDetailsVH>(){
     class AccountDetailsVH(itemView: View): RecyclerView.ViewHolder(itemView) {

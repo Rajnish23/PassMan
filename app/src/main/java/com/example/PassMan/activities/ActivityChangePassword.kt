@@ -1,4 +1,4 @@
-package com.example.conceptsofkotlin.activities
+package com.example.PassMan.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,11 +7,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
-import android.widget.Toast
-import com.example.conceptsofkotlin.R
-import com.example.conceptsofkotlin.utils.ReusableTasks
-import com.example.conceptsofkotlin.utils.SessionManager
-import com.example.conceptsofkotlin.utils.showToast
+import com.example.PassMan.R
+import com.example.PassMan.utils.ReusableTasks
+import com.example.PassMan.utils.SessionManager
+import com.example.PassMan.utils.showToast
 import kotlinx.android.synthetic.main.activity_change_password.*
 
 class ActivityChangePassword : AppCompatActivity() {

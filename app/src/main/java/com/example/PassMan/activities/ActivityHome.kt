@@ -1,12 +1,11 @@
-package com.example.conceptsofkotlin.activities
+package com.example.PassMan.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.conceptsofkotlin.R
-import com.example.conceptsofkotlin.adapters.AccountDetailsAdapter
-import com.example.conceptsofkotlin.models.AccountDetails
+import com.example.PassMan.R
+import com.example.PassMan.adapters.AccountDetailsAdapter
+import com.example.PassMan.models.AccountDetails
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.recycler_elements.*
 
 class ActivityHome : AppCompatActivity() {
 

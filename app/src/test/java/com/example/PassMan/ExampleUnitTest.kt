@@ -1,4 +1,4 @@
-package com.example.conceptsofkotlin
+package com.example.PassMan
 
 import org.junit.Test
 

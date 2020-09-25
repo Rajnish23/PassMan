@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.conceptsofkotlin">
+    package="com.example.PassMan">
 
     <application
         android:allowBackup="true"
@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ActivityHome"></activity>
+        <activity android:name="com.example.PassMan.activities.ActivityHome"></activity>
         <activity
-            android:name=".activities.ActivityChangePassword"
+            android:name="com.example.PassMan.activities.ActivityChangePassword"
             android:theme="@style/AppThemeChangePassword"/>
         <activity
-            android:name=".activities.ActivityLogin"
+            android:name="com.example.PassMan.activities.ActivityLogin"
             android:theme="@style/AppThemeLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

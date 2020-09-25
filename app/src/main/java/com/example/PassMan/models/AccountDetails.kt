@@ -1,4 +1,4 @@
-package com.example.conceptsofkotlin.models
+package com.example.PassMan.models
 
 //This is a data class for the elements of recycler view
 

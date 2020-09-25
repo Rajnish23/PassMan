@@ -1,14 +1,14 @@
-package com.example.conceptsofkotlin.activities
+package com.example.PassMan.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import com.example.conceptsofkotlin.R
-import com.example.conceptsofkotlin.utils.ReusableTasks
-import com.example.conceptsofkotlin.utils.SessionManager
-import com.example.conceptsofkotlin.utils.showToast
+import com.example.PassMan.R
+import com.example.PassMan.utils.ReusableTasks
+import com.example.PassMan.utils.SessionManager
+import com.example.PassMan.utils.showToast
 import kotlinx.android.synthetic.main.activity_login.*
 
 class ActivityLogin : AppCompatActivity() {

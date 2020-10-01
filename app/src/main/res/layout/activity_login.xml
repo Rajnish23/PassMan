@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<RelativeLayout
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimary"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp"
-    android:paddingTop="80dp"
-    tools:context=".activities.ActivityLogin">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
-    <ImageView
-        android:id="@+id/ic_logo"
-        android:src="@drawable/ic_logo"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginBottom="40dp"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_password"
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ic_logo"
-        app:passwordToggleEnabled="true">
+        android:background="@color/colorPrimary"
+        android:paddingLeft="30dp"
+        android:paddingTop="80dp"
+        android:paddingRight="30dp"
+        tools:context=".activities.ActivityLogin">
 
-        <EditText
-            android:id="@+id/edPassword"
-            android:hint="@string/hint_password"
-            android:textColor="@color/colorText"
-            android:inputType="textPassword"
+        <ImageView
+            android:id="@+id/ic_logo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="100dp"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/ic_logo" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_logo"
+            app:passwordToggleEnabled="true">
 
-    <ProgressBar
-        android:id="@+id/pbLoading"
-        android:layout_below="@+id/til_password"
-        android:layout_marginTop="30dp"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorText" />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_below="@+id/til_password"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:textColor="@color/colorText"
-        android:text="@string/txt_lgn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tv_changePass"
-        android:layout_below="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="@string/txt_changePass"
-        android:textColor="@android:color/black"/>
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_password"
+            android:layout_marginTop="30dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_password"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="@string/txt_lgn"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/tv_changePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/txt_changePass"
+            android:textColor="@android:color/black" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
 
 </ScrollView>

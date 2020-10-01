@@ -8,6 +8,9 @@
     <string name="empty_field">Empty Field !</string>
     <string name="incorrect_value">Incorrect Value !</string>
     <string name="success">"Successfully Done"</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_email">Email</string>
+    <string name="save">Save</string>
 </resources>
 
 

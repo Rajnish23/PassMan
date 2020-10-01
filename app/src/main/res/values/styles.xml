@@ -6,34 +6,45 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
     </style>
 
-<!-- Login Activity Theme. -->
-<style name="AppThemeLogin" parent="Theme.AppCompat.Light.DarkActionBar">
-    <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="colorAccent">@color/colorAccent</item>
-    <item name="windowActionBar">false</item>
-    <item name="windowNoTitle">true</item>
-</style>
+    <!-- Login Activity Theme. -->
+    <style name="AppThemeLogin" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
-<style name="AppThemeLogin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-<style name="AppThemeLogin.PopUpOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppThemeLogin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeLogin.PopUpOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-<!-- Change Password Activity Theme. -->
-<style name="AppThemeChangePassword" parent="Theme.AppCompat.Light.DarkActionBar">
-    <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimary2</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark2</item>
-    <item name="colorAccent">@color/colorAccent</item>
-    <item name="windowActionBar">false</item>
-    <item name="windowNoTitle">true</item>
-</style>
+    <!-- Change Password Activity Theme. -->
+    <style name="AppThemeChangePassword" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary2</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark2</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
-<style name="AppThemeRegister.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-<style name="AppThemeRegister.PopUpOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppThemeRegister.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeRegister.PopUpOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="BottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomModelStyle</item>
+    </style>
+
+    <style name="BottomModelStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="background">@drawable/bg_rounded_dialog</item>
+    </style>
 
 </resources>
 

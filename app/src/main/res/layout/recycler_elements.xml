@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="2dp"
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -21,41 +21,53 @@
             android:layout_height="wrap_content"
             android:id="@+id/tv_account"
             android:textColor="@color/blackColor"
-            android:text="Account Name"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:padding="16dp"/>
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Account Name"/>
 
-        <LinearLayout
+        <ImageButton
+            android:id="@+id/more_option_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_email"
+            android:textColor="@color/whiteColor"
+            tools:text="Email Address"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_account"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_password"
+            android:textColor="@color/whiteColor"
+            tools:text="Password"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"/>
+
+        <androidx.constraintlayout.widget.Group
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ll_expandable"
-            android:visibility="visible"
-            android:orientation="vertical">
+            app:constraint_referenced_ids="tv_email, tv_password"
+            android:visibility="visible"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_email"
-                android:textColor="@color/whiteColor"
-                android:text="Email Address"
-                android:textStyle="italic"
-                android:textSize="16sp"
-                android:padding="16dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_password"
-                android:textColor="@color/whiteColor"
-                android:text="Password"
-                android:textStyle="italic"
-                android:textSize="16sp"
-                android:padding="16dp"/>
-
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

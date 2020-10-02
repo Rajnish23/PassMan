@@ -6,7 +6,7 @@ import java.util.*
 
 open class NewAccountEntry(
     @PrimaryKey
-    var id: String = UUID.randomUUID().toString(),
+    var id: String = "",
     var title: String = "",
     var email: String = "",
     var password: String = "",

@@ -1,50 +1,38 @@
 package com.example.PassMan.activities.add_new_entry
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
 import com.example.PassMan.R
 import com.example.PassMan.models.NewAccountEntry
 import com.example.PassMan.utils.ReusableTasks
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import io.realm.Realm
-import kotlinx.android.synthetic.main.fragment_new_entry_dialog.*
+import kotlinx.android.synthetic.main.activity_new_entry.emailTL
+import kotlinx.android.synthetic.main.activity_new_entry.passwordTL
+import kotlinx.android.synthetic.main.activity_new_entry.saveBtn
+import kotlinx.android.synthetic.main.activity_new_entry.titleTL
 
-class NewEntryDialogFragment : BottomSheetDialogFragment() {
+class ActivityNewEntry : AppCompatActivity() {
 
     private val realmInstance = Realm.getDefaultInstance()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(
-            R.layout.fragment_new_entry_dialog,
-            container, false
-        )
-        return view
-    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_new_entry)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         saveBtn.setOnClickListener {
-            valiDateInputs()
+            onSave()
         }
     }
 
-    private fun valiDateInputs() {
+    private fun onSave() {
         val title = titleTL?.editText?.text?.toString() ?: ""
         val email = emailTL?.editText?.text?.toString() ?: ""
         val password = passwordTL?.editText?.text?.toString() ?: ""
         titleTL.error = ""
         emailTL.error = ""
         passwordTL.error = ""
-        val performTask = ReusableTasks(requireContext())
+        val performTask = ReusableTasks(this)
         when (performTask.canProceed(title)) {
             true -> {
 
@@ -86,7 +74,6 @@ class NewEntryDialogFragment : BottomSheetDialogFragment() {
         )
         realmInstance.insert(newAccountEntry)
         realmInstance.commitTransaction()
-        dismiss()
+        finish()
     }
-
 }

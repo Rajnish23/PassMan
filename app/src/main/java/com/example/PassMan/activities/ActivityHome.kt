@@ -1,10 +1,11 @@
 package com.example.PassMan.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.PassMan.PassManApplication
 import com.example.PassMan.R
-import com.example.PassMan.activities.add_new_entry.NewEntryDialogFragment
+import com.example.PassMan.activities.add_new_entry.ActivityNewEntry
 import com.example.PassMan.adapters.AccountDetailsAdapter
 import com.example.PassMan.models.AccountDetails
 import com.example.PassMan.models.NewAccountEntry
@@ -29,9 +30,13 @@ class ActivityHome : AppCompatActivity() {
         setRecyclerView()
 
         addNewEntryBtn.setOnClickListener {
-            val dialog = NewEntryDialogFragment()
-            dialog.show(supportFragmentManager, "entry_dialog")
+           navigateToNewEntryActivity()
         }
+    }
+
+    private fun navigateToNewEntryActivity() {
+        val intent = Intent(this, ActivityNewEntry::class.java)
+        startActivity(intent)
     }
 
     private fun setRecyclerView() {
@@ -45,27 +50,6 @@ class ActivityHome : AppCompatActivity() {
         allAccountEntry.addChangeListener { result, changeSet ->
            mapToAccountDetails(result)
         }
-        /* accountDetails.add(
-             AccountDetails(
-
-             "Gmail","gmail@gmail.com","gmail@123"
-         )
-         )
-
-         accountDetails.add(AccountDetails(
-
-             "YouTube","youtube@gmail.com","youtube@123"
-         ))
-
-         accountDetails.add(AccountDetails(
-
-             "GitHub","github@gmail.com","github@123"
-         ))
-
-         accountDetails.add(AccountDetails(
-
-             "BitBucket","bitbucket@gmail.com","bitbucket@123"
-         ))*/
     }
 
     private fun mapToAccountDetails(allAccountEntry: RealmResults<NewAccountEntry>) {

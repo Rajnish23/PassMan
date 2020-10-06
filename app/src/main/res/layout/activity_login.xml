@@ -67,7 +67,6 @@
             android:text="@string/txt_changePass"
             android:textColor="@android:color/black" />
 
-
     </RelativeLayout>
 
 </ScrollView>

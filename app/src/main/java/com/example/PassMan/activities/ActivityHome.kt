@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.PassMan.PassManApplication
 import com.example.PassMan.R
-import com.example.PassMan.activities.add_new_entry.ActivityNewEntry
 import com.example.PassMan.adapters.AccountDetailsAdapter
 import com.example.PassMan.models.AccountDetails
 import com.example.PassMan.models.NewAccountEntry

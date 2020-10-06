@@ -1,4 +1,4 @@
-package com.example.PassMan.activities.add_new_entry
+package com.example.PassMan.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

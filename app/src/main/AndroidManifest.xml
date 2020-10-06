@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.add_new_entry.ActivityNewEntry"></activity>
+        <activity android:name=".activities.ActivityNewEntry"></activity>
         <activity android:name=".activities.ActivityHome" />
         <activity
             android:name=".activities.ActivityChangePassword"
